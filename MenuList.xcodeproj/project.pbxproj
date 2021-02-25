@@ -14,6 +14,10 @@
 		182EEEC525E764C9008ADF05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182EEEC425E764C9008ADF05 /* Assets.xcassets */; };
 		182EEEC825E764C9008ADF05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182EEEC625E764C9008ADF05 /* LaunchScreen.storyboard */; };
 		182EEED325E764C9008ADF05 /* MenuListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182EEED225E764C9008ADF05 /* MenuListTests.swift */; };
+		182EEEDE25E76694008ADF05 /* menu.json in Resources */ = {isa = PBXBuildFile; fileRef = 182EEEDD25E76693008ADF05 /* menu.json */; };
+		182EEEE025E76A6B008ADF05 /* MenuCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182EEEDF25E76A6B008ADF05 /* MenuCategory.swift */; };
+		182EEEE225E76BD5008ADF05 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182EEEE125E76BD5008ADF05 /* Function.swift */; };
+		182EEEE425E79817008ADF05 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182EEEE325E79817008ADF05 /* MenuCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,10 @@
 		182EEECE25E764C9008ADF05 /* MenuListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MenuListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		182EEED225E764C9008ADF05 /* MenuListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListTests.swift; sourceTree = "<group>"; };
 		182EEED425E764C9008ADF05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		182EEEDD25E76693008ADF05 /* menu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = menu.json; sourceTree = "<group>"; };
+		182EEEDF25E76A6B008ADF05 /* MenuCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategory.swift; sourceTree = "<group>"; };
+		182EEEE125E76BD5008ADF05 /* Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
+		182EEEE325E79817008ADF05 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,10 +90,14 @@
 				182EEEBB25E764C1008ADF05 /* AppDelegate.swift */,
 				182EEEBD25E764C1008ADF05 /* SceneDelegate.swift */,
 				182EEEBF25E764C2008ADF05 /* ViewController.swift */,
+				182EEEE125E76BD5008ADF05 /* Function.swift */,
+				182EEEDF25E76A6B008ADF05 /* MenuCategory.swift */,
+				182EEEDD25E76693008ADF05 /* menu.json */,
 				182EEEC125E764C2008ADF05 /* Main.storyboard */,
 				182EEEC425E764C9008ADF05 /* Assets.xcassets */,
 				182EEEC625E764C9008ADF05 /* LaunchScreen.storyboard */,
 				182EEEC925E764C9008ADF05 /* Info.plist */,
+				182EEEE325E79817008ADF05 /* MenuCell.swift */,
 			);
 			path = MenuList;
 			sourceTree = "<group>";
@@ -182,6 +194,7 @@
 			files = (
 				182EEEC825E764C9008ADF05 /* LaunchScreen.storyboard in Resources */,
 				182EEEC525E764C9008ADF05 /* Assets.xcassets in Resources */,
+				182EEEDE25E76694008ADF05 /* menu.json in Resources */,
 				182EEEC325E764C2008ADF05 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,9 +213,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182EEEE025E76A6B008ADF05 /* MenuCategory.swift in Sources */,
 				182EEEC025E764C2008ADF05 /* ViewController.swift in Sources */,
+				182EEEE425E79817008ADF05 /* MenuCell.swift in Sources */,
 				182EEEBC25E764C1008ADF05 /* AppDelegate.swift in Sources */,
 				182EEEBE25E764C1008ADF05 /* SceneDelegate.swift in Sources */,
+				182EEEE225E76BD5008ADF05 /* Function.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
