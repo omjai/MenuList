@@ -18,6 +18,7 @@
 		182EEEE025E76A6B008ADF05 /* MenuCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182EEEDF25E76A6B008ADF05 /* MenuCategory.swift */; };
 		182EEEE225E76BD5008ADF05 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182EEEE125E76BD5008ADF05 /* Function.swift */; };
 		182EEEE425E79817008ADF05 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182EEEE325E79817008ADF05 /* MenuCell.swift */; };
+		187B531825E8CB64006EABF6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B531725E8CB64006EABF6 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		182EEEDF25E76A6B008ADF05 /* MenuCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategory.swift; sourceTree = "<group>"; };
 		182EEEE125E76BD5008ADF05 /* Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
 		182EEEE325E79817008ADF05 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		187B531725E8CB64006EABF6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,15 +91,16 @@
 			children = (
 				182EEEBB25E764C1008ADF05 /* AppDelegate.swift */,
 				182EEEBD25E764C1008ADF05 /* SceneDelegate.swift */,
-				182EEEBF25E764C2008ADF05 /* ViewController.swift */,
-				182EEEE125E76BD5008ADF05 /* Function.swift */,
-				182EEEDF25E76A6B008ADF05 /* MenuCategory.swift */,
-				182EEEDD25E76693008ADF05 /* menu.json */,
+				187B531325E8CAAB006EABF6 /* Controller */,
+				187B531425E8CAC4006EABF6 /* Model */,
+				187B531525E8CAD6006EABF6 /* View */,
+				187B531625E8CB14006EABF6 /* Common Function */,
+				187B531925E8CB93006EABF6 /* Extensions */,
+				187B531A25E8CBC0006EABF6 /* Menu Data */,
 				182EEEC125E764C2008ADF05 /* Main.storyboard */,
 				182EEEC425E764C9008ADF05 /* Assets.xcassets */,
 				182EEEC625E764C9008ADF05 /* LaunchScreen.storyboard */,
 				182EEEC925E764C9008ADF05 /* Info.plist */,
-				182EEEE325E79817008ADF05 /* MenuCell.swift */,
 			);
 			path = MenuList;
 			sourceTree = "<group>";
@@ -109,6 +112,54 @@
 				182EEED425E764C9008ADF05 /* Info.plist */,
 			);
 			path = MenuListTests;
+			sourceTree = "<group>";
+		};
+		187B531325E8CAAB006EABF6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				182EEEBF25E764C2008ADF05 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		187B531425E8CAC4006EABF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				182EEEDF25E76A6B008ADF05 /* MenuCategory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		187B531525E8CAD6006EABF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				182EEEE325E79817008ADF05 /* MenuCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		187B531625E8CB14006EABF6 /* Common Function */ = {
+			isa = PBXGroup;
+			children = (
+				182EEEE125E76BD5008ADF05 /* Function.swift */,
+			);
+			path = "Common Function";
+			sourceTree = "<group>";
+		};
+		187B531925E8CB93006EABF6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				187B531725E8CB64006EABF6 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		187B531A25E8CBC0006EABF6 /* Menu Data */ = {
+			isa = PBXGroup;
+			children = (
+				182EEEDD25E76693008ADF05 /* menu.json */,
+			);
+			path = "Menu Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +270,7 @@
 				182EEEBC25E764C1008ADF05 /* AppDelegate.swift in Sources */,
 				182EEEBE25E764C1008ADF05 /* SceneDelegate.swift in Sources */,
 				182EEEE225E76BD5008ADF05 /* Function.swift in Sources */,
+				187B531825E8CB64006EABF6 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +439,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = CPWDSEWA.MenuList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -404,7 +456,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = CPWDSEWA.MenuList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

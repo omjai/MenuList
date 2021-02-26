@@ -11,8 +11,11 @@ import UIKit
 class ViewController: UITableViewController, UIGestureRecognizerDelegate {
 
     var menuData: [MenuData] = []
+    
     var previousIndex = -1
     var hiddenSections = Set<Int>()
+    //to keep track of already expanded section
+    var alreadyExpandedElement: UIButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +24,12 @@ class ViewController: UITableViewController, UIGestureRecognizerDelegate {
             return
         }
         menuData = menudata
-        print(menuData)
     }
-
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     //MARK: UITableViewDataSource
     override func numberOfSections(in tableView: UITableView) -> Int {
         menuData.count
@@ -50,8 +56,10 @@ class ViewController: UITableViewController, UIGestureRecognizerDelegate {
         let width = menuData[section].name.widthOfString(usingFont: UIFont.systemFont(ofSize: 18))
         sectionButton.setTitle(menuData[section].name, for: .normal)
         sectionButton.setTitleColor(UIColor.black, for: .normal)
-        sectionButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: -self.view.frame.width/1.1 + width, bottom: 0, right: 0)
-//        sectionButton.backgroundColor = .systemBlue
+        sectionButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: -self.view.frame.width/1.1 + width - 10, bottom: 0, right: 0)
+        sectionButton.setImage(UIImage(named: "drop_20X20"), for: .normal)
+        sectionButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -self.view.frame.width/1.2 - width)
+        sectionButton.backgroundColor = .white
         sectionButton.tag = section
         sectionButton.addTarget(self, action: #selector(self.hideShowSection(sender:)), for: .touchUpInside)
         return sectionButton
@@ -68,25 +76,28 @@ class ViewController: UITableViewController, UIGestureRecognizerDelegate {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
-//        let cell = tableView.cellForRow(at: IndexPath(row: indexPath.row, section: indexPath.section)) as! MenuCell
-//        cell.displayNameLbl.numberOfLines = 0
-//        self.tableView.reloadRows(at: [IndexPath(row: indexPath.row, section: indexPath.section)], with: .automatic)
+
     }
     
     @objc private func hideShowSection(sender: UIButton) {
         let section = sender.tag
         if previousIndex != -1 {
             if previousIndex == section {
+                sender.setImage(UIImage(named: "drop_20X20"), for: .normal)
                 closeWithExpandSection(section: section)
                 previousIndex = -1
                 return
             }
+            alreadyExpandedElement?.setImage(UIImage(named: "drop_20X20"), for: .normal)
             closeWithExpandSection(section: previousIndex)
             //now after closing that opened section insert new section rows
             //insert
+            sender.setImage(UIImage(named: "up_20X20"), for: .normal)
             expandSection(section: section)
         } else {
             //insert
+            alreadyExpandedElement = sender
+            sender.setImage(UIImage(named: "up_20X20"), for: .normal)
             expandSection(section: section)
         }
     }
